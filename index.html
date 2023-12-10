@@ -3,48 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>калькулятор</title>
+    <title>Калькулятор</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <script src="js/Types/Complex.js"></script>
+    <script src="js/Types/Vector.js"></script>
+    <script src="js/Types/Matrix.js"></script>
     <script src="js/Calculators/RealCalculator.js"></script>
     <script src="js/Calculators/ComplexCalculator.js"></script>
+    <script src="js/Calculators/VectorCalculator.js"></script>
+    <script src="js/Calculators/MatrixCalculator.js"></script>
     <script src="js/main.js"></script>
 </head>
 
 <body>
-    <h1>RealCalculator</h1>
-    <div class="RealCalculator">
-        <input id="inputReal1" />
-        <button id="addReal">+</button>
-        <button id="subReal">-</button>
-        <button id="multReal">*</button>
-        <button id="divReal">:</button>
-        <button id="prodReal">prod</button>
-        <button id="powReal">**</button>
-        <button id="oneReal">1</button>
-        <button id="zeroReal">0</button>
-        <input id="inputReal2" />
-        <br>
-        <div id="resultReal"></div>
-    </div>
-    <h1>ComplexCalculator</h1>
-    <div class="ComplexCalculator">
-        <input id="inputComplexRe1" />
-        <input id="inputComplexIm1" />
-        <button id="addComplex">+</button>
-        <button id="subComplex">-</button>
-        <button id="multComplex">*</button>
-        <button id="divComplex">:</button>
-        <button id="prodComplex">prod</button>
-        <button id="powComplex">**</button>
-        <button id="oneComplex">1</button>
-        <button id="zeroComplex">0</button>
-        <input id="inputComplexRe2" />
-        <input id="inputComplexIm2" />
-        <br>
-        <div id="resultComplex"></div>
-    </div>
+    <textarea id="a" placeholder="a"></textarea>
+    <textarea id="b" placeholder="b"></textarea>
+    <textarea id="c" placeholder="result"></textarea>
+    <button class="operand" data-operand="add">+</button>
+    <button class="operand" data-operand="sub">-</button>
+    <button class="operand" data-operand="mult">*</button>
+    <button class="operand" data-operand="div">/</button>
+    <button class="operand" data-operand="prod">scal</button>
+    <button class="operand" data-operand="pow">^</button>
 </body>
 
 </html>
