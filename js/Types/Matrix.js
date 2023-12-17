@@ -10,6 +10,6 @@ class Matrix {
     toString() {
         return this.values.map(
             arr => arr.map(el => el.toString()).join(', ')
-        ).join('/n');
+        ).join('\n');
     }
 }

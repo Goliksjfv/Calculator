@@ -21,12 +21,16 @@ class VectorCalculator extends RealCalculator {
         return new Vector(a.values.map(elem => super.prod(elem, p)));
     }
     pow(a, n) {
-        
+        let s = this.one(a.values.length);
+        for (let i = 0; i < n; i++) {
+            s = this.mult(s, a);
+        }
+        return s;
     }
     one(length) {
         const values = [];
         for (let i = 0; i < length; i++) {
-            values.push(super.one());
+            values.push(i === 0 ? super.one() : super.zero());
         }
         return new Vector(values);
     }

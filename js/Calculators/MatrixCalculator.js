@@ -4,8 +4,10 @@ class MatrixCalculator extends RealCalculator {
     }
 
     add(a, b) {
+        console.log(a,b);
         return new Matrix(a.values.map(
-            (arr, i) => arr.map((elem, j) => super.add(elem, b.values[i][j]))
+            (arr, i) => arr.map((elem, j) => super.add(elem, b.values[i][j])
+            )
         ));
     }
 
@@ -40,7 +42,11 @@ class MatrixCalculator extends RealCalculator {
         ));
     }
     pow(a, n) {
-
+        let s = this.one(a.values.length);
+        for (let i = 0; i < n; i++) {
+            s = this.mult(s, a);
+        }
+        return s;
     }
     one(length) {
         const values = [];
